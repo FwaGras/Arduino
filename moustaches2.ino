@@ -1,3 +1,4 @@
+//script inspiré par celui-ci : http://chamayou.franck.free.fr/spip/spip.php?article314
 int moteurA = 12;
 int pwmA = 3;
 int freinA = 9;
@@ -64,7 +65,7 @@ void recularret(){
   digitalWrite(moteurB, HIGH);
   digitalWrite(freinB, LOW);
   analogWrite(pwmB, 255);
-  delay(200); 
+  delay(5000); 
   //le robot s'arrête
   digitalWrite(freinA, HIGH); //engage les freins
   digitalWrite(freinB, HIGH);
