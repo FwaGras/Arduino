@@ -1,3 +1,4 @@
+//programme utilisant millis à la place de delay (idée proposé par ChatGPT)
 unsigned long previousTime = 0;
 const long rotationDuration = 600;
 const long reverseDuration = 200;
