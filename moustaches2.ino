@@ -81,7 +81,7 @@ void tournegauche(){
   digitalWrite(moteurB, HIGH); //le moteur B va en arrière
   digitalWrite(freinB, LOW); 
   analogWrite(pwmB, 255);
-  delay(600);
+  delay(1000);
 }
 
 void tournedroite(){
@@ -89,7 +89,7 @@ void tournedroite(){
   digitalWrite(freinA, LOW);
   analogWrite(pwmA, 255);
   digitalWrite(moteurB, LOW); //le moteur B va en avant
-  digitalWrite(freinA, LOW); 
-  analogWrite(pwmA, 255);
-  delay(600);
+  digitalWrite(freinB, LOW); 
+  analogWrite(pwmB, 255);
+  delay(1000);
 }
