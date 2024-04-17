@@ -2,12 +2,12 @@
 int moteurA = 12;
 int pwmA = 3;
 int freinA = 9;
-int capteurA = 4;
+int capteurA = 7;
 
 int moteurB = 13;
 int pwmB = 11;
 int freinB  = 8;
-int capteurB = 5;
+int capteurB = 6;
 
 //test bool
 
@@ -16,13 +16,13 @@ void setup() {
   pinMode(moteurA, OUTPUT);
   pinMode(pwmA, OUTPUT);
   pinMode(freinA, OUTPUT);
-  pinMode(capteurA, INPUT);
+  pinMode(capteurA, INPUT_PULLUP);
 
   //channel B
   pinMode(moteurB, OUTPUT);
   pinMode(pwmB, OUTPUT);
   pinMode(freinB, OUTPUT);
-  pinMode(capteurB, INPUT);
+  pinMode(capteurB, INPUT_PULLUP);
 }
 
 void loop() {
@@ -31,11 +31,11 @@ void loop() {
   etatCapteurA = digitalRead(capteurA);
   etatCapteurB = digitalRead(capteurB);
 
-  if (etatCapteurA == HIGH){
+  if (etatCapteurA == LOW){
     recularret();
     tournegauche();
   }
-  else if (etatCapteurB == HIGH){
+  else if (etatCapteurB == LOW){
     recularret();
     tournedroite();
   }
