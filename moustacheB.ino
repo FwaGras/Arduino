@@ -1,7 +1,7 @@
 int moteurA = 12;
 int pwmA = 3;
 int freinA = 9;
-//int capteurA = 14;
+//int capteurA = 7;
 
 int moteurB = 13;
 int pwmB = 11;
@@ -15,13 +15,13 @@ void setup() {
   pinMode(moteurA, OUTPUT);
   pinMode(pwmA, OUTPUT);
   pinMode(freinA, OUTPUT);
-  //pinMode(capteurA, INPUT);
+  //pinMode(capteurA, INPUT_PULLUP);
 
   //channel B
   pinMode(moteurB, OUTPUT);
   pinMode(pwmB, OUTPUT);
   pinMode(freinB, OUTPUT);
-  pinMode(capteurB, INPUT);
+  pinMode(capteurB, INPUT_PULLUP);
 }
 
 void loop() {
@@ -30,7 +30,7 @@ void loop() {
   //etatCapteurA = digitalRead(capteurA);
   etatCapteurB = digitalRead(capteurB);
 
-  if (etatCapteurB == HIGH){
+  if (etatCapteurB == LOW){
     recularret();
     tournedroite();
   }
